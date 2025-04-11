@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Beatriz 💛</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff8dc;
+      color: #5a3e1b;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .slideshow {
+      margin: 20px auto;
+      width: 100%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .slideshow img {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+      border-radius: 12px;
+      display: none;
+    }
+
+    .slideshow img.active {
+      display: block;
+    }
+
+    .botao-amor {
+      margin: 30px auto;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ffcc00;
+      color: #663300;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-block;
+      max-width: 90%;
+      word-wrap: break-word;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 16px;
+      }
+
+      .botao-amor {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>
+    Obrigado por tudo, meu bem. Os melhores momentos são com você, aquela que me deixa leve e me faz feliz sem esforço algum. <br>
+    Sou abençoado e tenho a sorte de ter uma mulher como você ao meu lado. <br>
+    Eu amo a oportunidade de te amar, minha princesa. <br>
+    Vou me casar com você. 💍💛
+  </h1>
+
+  <div class="slideshow">
+    <img src="foto1.jpg" class="active">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
+    <img src="foto5.jpg">
+    <img src="foto6.jpg">
+  </div>
+
+  <button class="botao-amor">Eu te vivo, Meu Bem!</button>
+
+  <script>
+    const slides = document.querySelectorAll(".slideshow img");
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 4000);
+  </script>
+</body>
+</html>
